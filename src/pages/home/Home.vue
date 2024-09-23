@@ -3,8 +3,10 @@ import LeafletMapLoader, { Init } from '@/components/LeaflefMapLoader';
 
 const init: Init = async (initializeMap) => {
   const mapInstance = await initializeMap({
-    center: [16.756386, -93.132305],
-    zoom: 13
+    config: {
+      center: [16.756386, -93.132305],
+      zoom: 13
+    }
   });
 
   if (mapInstance) {

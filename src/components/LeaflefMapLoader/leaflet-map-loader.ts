@@ -14,7 +14,7 @@ const initializeMap = (mapRef: LeafletElement, mapConfig: MapConfig) => {
     mapRef.map.remove();
   }
 
-  const map = L.map(mapRef, mapConfig);
+  const map = L.map(mapRef, mapConfig.config);
   mapRef.map = map;
 
   return {
