@@ -4,9 +4,8 @@
 </script>
 
 <template>
-    <div>
-        <h1>Tuxmapa Home</h1>
+    <div class="w-screen h-screen">
+        
     </div>
-
 </template>
 
