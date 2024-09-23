@@ -34,6 +34,6 @@ onMounted(() => {
       '[&_.leaflet-tile-pane]:grayscale [&_.leaflet-tile-pane]:invert [&_.leaflet-tile-pane]:brightness-90 [&_.leaflet-tile-pane]:hue-rotate-15': props.darkMode,
     }"
   >
-    <div id="mapa" ref="mapRef" class="w-full h-full"></div>
+    <div ref="mapRef" class="w-full h-full"></div>
   </div>
 </template>
