@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useTuxmapaStore } from '@/stores';
 import LeafletMapLoader, { Init } from '@/components/LeaflefMapLoader';
+import { onMounted } from 'vue';
 
+const tuxmapaStore = useTuxmapaStore();
 const init: Init = async (initializeMap) => {
   const mapInstance = await initializeMap({
     config: {
@@ -23,6 +26,13 @@ const init: Init = async (initializeMap) => {
       .addTo(map);
   }
 };
+
+onMounted(() => {
+  tuxmapaStore.fetchRoutes()
+    .then((response) => {
+      console.log('Routes fetched', response);
+    });
+});
 
 </script>
 
