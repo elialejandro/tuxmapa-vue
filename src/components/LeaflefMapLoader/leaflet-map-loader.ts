@@ -1,4 +1,4 @@
-import L, { MapOptions, Map } from 'leaflet';
+import L, { Map, MapOptions } from 'leaflet';
 import 'leaflet.markercluster';
 
 export interface MapConfig {
@@ -14,7 +14,7 @@ const initializeMap = (mapRef: LeafletElement, mapConfig: MapConfig) => {
     mapRef.map.remove();
   }
 
-  const map = L.map(mapRef, mapConfig.config);
+  const map = L.map(mapRef, mapConfig);
   mapRef.map = map;
 
   return {
